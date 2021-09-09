@@ -5,8 +5,10 @@ let currentCell;
 let pieceColor;
 let otherPieceColor;
 let isWhiteTurn = true;
-let firstMove = false;
-let castle = true;
+let firstWhiteMove = true;
+let firstBlackMove = true;
+let whiteCastle = false;
+let blackCastle = false;
 
 // these variables hold square number
 let moveToSqaure;
@@ -73,11 +75,18 @@ function getCell(that) {
                 moveQueen(that);
                 break;
             case '4':
+                if (firstWhiteMove) {
+                    whiteCastle = getKingCastle(that, pieces.whiteRook);
+                    if (whiteCastle) {
+                        firstWhiteMove = false;
+                        break;
+                    }
+                }
             case 'a':
-                if (firstMove) {
-                    checkPieceMoved(that, getKingCastle());
-                    if (castle) {
-                        firstMove = false;
+                if (firstBlackMove) {
+                    blackCastle = getKingCastle(that, pieces.blackRook);
+                    if (blackCastle) {
+                        firstBlackMove = false;
                         break;
                     }
                 }

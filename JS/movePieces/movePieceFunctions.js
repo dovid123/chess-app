@@ -23,6 +23,12 @@ function checkPieceMoved(that, availableMoves, direction = 1) {
         for (i = 0; i < availableMoves.length; i++) {
             if (moveCheck(availableMoves[i], opr)) {
                 movePiece(that);
+                if (pieceColor === '4') {
+                    firstWhiteMove = false;
+                }
+                if (pieceColor === 'a') {
+                    firstBlackMove = false;
+                }
                 return true;
             }
             for (k = 0; k < longDistance.length; k++) {

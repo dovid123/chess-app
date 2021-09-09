@@ -65,6 +65,10 @@ function fillSquare(squareNumber, content) {
 
 function setBoard() {
     state = false;
+    whiteCastle = false;
+    blackCastle = false;
+    firstWhiteMove = true;
+    firstBlackMove = true;
     isWhiteTurn = true;
     // setting rows 3-6 as empty
     for (i = 3; i < 7; i++) {
