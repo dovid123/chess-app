@@ -1,0 +1,47 @@
+body {
+    background-color: burlywood;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+    text-align: center;
+}
+
+button {
+    text-align: center;
+    height: 35px;
+    background-color: rgb(161, 202, 47);
+    color: rgb(12, 25, 26);
+}
+
+button:hover {
+    background-color: chartreuse;
+}
+
+.tdWhite {
+    background-color: aliceblue;
+}
+
+.tdWhite:hover {
+    background-color: rgb(198, 225, 248);
+}
+
+.tdBlue {
+    background-color: aqua;
+}
+
+.tdBlue:hover {
+    /* background-color: rgb(198, 225, 248); */
+    background-color: rgb(4, 223, 223);
+}
+
+.btn {
+    text-align: center;
+    padding: 20px;
+}
